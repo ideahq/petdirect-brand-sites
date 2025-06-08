@@ -4,4 +4,8 @@
 // Bootstrap + theme + variables
 @import "bootstrap";
 
-// Site styles here...
+// Site styles
+@import "layout";
+@import "components/gallery";
+@import "components/info";
+@import "components/slides";

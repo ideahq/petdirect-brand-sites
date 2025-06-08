@@ -1,0 +1,61 @@
+---
+import Slides from './Slides';
+import { theme } from '../utils/theme';
+
+let title = "6 Paw-licking good flavours";
+let slides = [
+    {
+        url: "#",
+        image: "/test-packaging.webp"
+    },
+    {
+        url: "#",
+        image: "/test-packaging.webp"
+    },
+    {
+        url: "#",
+        image: "/test-packaging.webp"
+    },
+    {
+        url: "#",
+        image: "/test-packaging.webp"
+    },
+    {
+        url: "#",
+        image: "/test-packaging.webp"
+    },
+    {
+        url: "#",
+        image: "/test-packaging.webp"
+    }
+];
+
+if (theme.id === 'wild-paw') {
+    title = "Browse the range";
+    slides = [
+        {
+            url: "#",
+            image: "/test-packaging.webp",
+            name: "Beef"
+        },
+        {
+            url: "#",
+            image: "/test-packaging.webp",
+            name: "Chicken"
+        },
+        {
+            url: "#",
+            image: "/test-packaging.webp",
+            name: "Kangaroo"
+        }
+    ];
+}
+---
+
+<div class="products">
+    <h3 class="text-center">{title}</h3>
+    <Slides
+        slides={slides}
+        client:visible
+    />
+</div>

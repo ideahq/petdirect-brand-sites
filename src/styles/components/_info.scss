@@ -1,0 +1,17 @@
+.info {
+    background: $black;
+    color: $white;
+    padding: $spacer * 2;
+    text-align: center;
+    
+    .row {
+        --#{$prefix}gutter-x: #{$spacer * 2};
+        --#{$prefix}gutter-y: #{$spacer * 2};
+    }
+    
+    img {
+        object-fit: contain;
+        height: $spacer * 6;
+        width: $spacer * 6;
+    }
+}

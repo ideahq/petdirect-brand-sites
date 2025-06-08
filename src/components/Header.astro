@@ -1,7 +1,12 @@
 ---
-const { heading } = Astro.props;
+import { Navbar } from 'react-bootstrap';
+import { theme } from '../utils/theme';
 ---
 
 <header>
-    <h1>{heading}</h1>
+    <Navbar>
+        <Navbar.Brand href="/">
+            <img src={`${theme.id}/logo.svg`} alt={theme.name} />
+        </Navbar.Brand>
+    </Navbar>
 </header>

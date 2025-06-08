@@ -1,0 +1,24 @@
+---
+import { Col, Row, Ratio } from 'react-bootstrap';
+import { theme } from '../utils/theme';
+
+let title = "Beg-Worthy Bites";
+
+if (theme.id === 'wild-paw') {
+    title = "Paws Gallery";
+}
+
+---
+
+<div class="gallery">
+    <h3 class="text-center">{title}</h3>
+    <Row>
+        {Array.from({ length: 8 }).map((u, i) =>
+            <Col xs={6} md={3} key={i}>
+                <Ratio>
+                    <img src="/test.webp" />
+                </Ratio>
+            </Col>
+        )}
+    </Row>
+</div>

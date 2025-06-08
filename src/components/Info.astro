@@ -1,0 +1,39 @@
+---
+import { Col, Row, Stack } from 'react-bootstrap';
+import { theme } from '../utils/theme';
+const points = [
+    {
+        image: "active-energy",
+        text: "Active Energy",
+    },
+    {
+        image: "healthy-digestion",
+        text: "Healthy Digestion",
+    },
+    {
+        image: "natural-ingredients",
+        text: "Made with Natural Ingredients",
+    },
+    {
+        image: "immune-health",
+        text: "Immune Health",
+    }
+];
+---
+
+<div class="info">
+    {theme.id === 'wild-paw' ? (
+        <Row>
+            {points.map((point, i) =>
+                <Col xs={12} md={3} key={i}>
+                    <Stack gap={3} className="align-items-center">
+                        <img src={`/${theme.id}/info/${point.image}.svg`} />
+                        <span>{point.text}</span>
+                    </Stack>
+                </Col>
+            )}
+        </Row>
+    ) : (
+        <span>{theme.name}</span>
+    )}
+</div>

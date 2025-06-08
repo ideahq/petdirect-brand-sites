@@ -1,0 +1,8 @@
+.gallery {
+    padding: 0 ($spacer * .5);
+    
+    .row {
+        --#{$prefix}gutter-x: #{$spacer * .5};
+        --#{$prefix}gutter-y: #{$spacer * .5};
+    }
+}

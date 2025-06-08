@@ -1,0 +1,13 @@
+.layout {
+    --#{$prefix}gutter-x: 0;
+    --#{$prefix}gutter-y: 0;
+    background: $white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    container-type: inline-size;
+    
+    > section {
+        flex-grow: 1;
+    }
+}

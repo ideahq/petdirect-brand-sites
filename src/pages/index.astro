@@ -1,8 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
+import { Stack } from 'react-bootstrap';
+import Hero from '../components/Hero.astro';
+import Products from '../components/Products.astro';
+import Info from '../components/Info.astro';
+import Gallery from '../components/Gallery.astro';
 ---
 
 <Layout>
-    <Header heading="Brand Site" />
+    <Stack gap={3}>
+        <Hero />
+        <Products />
+        <Info />
+        <Gallery />
+    </Stack>
 </Layout>
