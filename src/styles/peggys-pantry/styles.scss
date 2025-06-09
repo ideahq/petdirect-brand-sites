@@ -1,0 +1,16 @@
+// Custom fonts
+@import "fonts";
+
+// Bootstrap + theme + variables
+@import "custom";
+@import "../global/bootstrap";
+
+// Global styles
+@import "../global/layout";
+@import "../global/components";
+
+body {
+    background-image: url('/peggys-pantry/background.svg');
+    background-position: center center;
+    background-size: 153px;
+}

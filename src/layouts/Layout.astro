@@ -1,5 +1,4 @@
 ---
-import '../styles/main.scss';
 import { Container } from 'react-bootstrap';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -13,7 +12,15 @@ import { theme } from '../utils/theme';
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{theme.name}</title>
-        <link rel="stylesheet" href={`${theme.id}/styles.css`} />
+        {theme.id === 'peggys-pantry' ? (
+            <style is:global lang="scss">
+                @import "../../src/styles/peggys-pantry/styles.scss";
+            </style>
+        ) : (
+            <style is:global lang="scss">
+                @import "../../src/styles/wild-paw/styles.scss";
+            </style>
+        )}
     </head>
     <body>
         <Container className="layout">
