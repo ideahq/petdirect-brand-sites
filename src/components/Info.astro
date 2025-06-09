@@ -23,6 +23,9 @@ const points = [
 
 <div class="info">
     {theme.id === 'wild-paw' ? (
+        <style lang="scss">
+            @import "../../src/styles/wild-paw/components/info.scss";
+        </style>
         <Row>
             {points.map((point, i) =>
                 <Col xs={12} md={3} key={i}>

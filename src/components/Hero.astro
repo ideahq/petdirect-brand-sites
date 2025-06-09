@@ -1,20 +1,37 @@
 ---
 import { theme } from '../utils/theme';
+import { Col, Image, Row } from 'react-bootstrap';
 ---
-
-
 
 <div class="hero">
     {theme.id === 'wild-paw' ? (
-        <h3>Deliciously healthy, naturally happy.</h3>
-        <p>
-            At Wild Paw, we’re committed to providing dogs with food that’s
-            as natural as it is nourishing. Inspired by the instinctive spirit
-            of every dog, Wild Paw&trade; stands for a return to simple, honest
-            nutrition. We use only ingredients we’d choose for our own dogs.
-            Each bite is packed with premium proteins, essential nutrients,
-            and wholesome goodness.
-        </p>
+        <style lang="scss">
+            @import "../../src/styles/wild-paw/components/hero.scss";
+        </style>
+        <Row className="hero-grid">
+            <Col xs={12}>
+                <div class="hero-heading">
+                    <h3>Deliciously healthy, naturally happy.</h3>
+                </div>
+            </Col>
+            <Col xs={12}>
+                <Image
+                    fluid
+                    src="/wild-paw/dog.webp"
+                    className="hero-image"
+                />
+            </Col>
+            <Col xs={12}>
+                <div class="hero-copy">
+                    At Wild Paw, we’re committed to providing dogs with food that’s
+                    as natural as it is nourishing. Inspired by the instinctive spirit
+                    of every dog, Wild Paw&trade; stands for a return to simple, honest
+                    nutrition. We use only ingredients we’d choose for our own dogs.
+                    Each bite is packed with premium proteins, essential nutrients,
+                    and wholesome goodness.
+                </div>
+            </Col>
+        </Row>
     ) : (
         <p>Dog Treats</p>
         <p>For training, treating or just because</p>

@@ -3,5 +3,12 @@ $link-decoration: none;
 
 $gray-100: #F7F7F7;
 $gray-200: #F9F9F9;
+$primary: #3A7829;
 
 $body-bg: $gray-100;
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
