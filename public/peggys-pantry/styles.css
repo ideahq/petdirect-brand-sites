@@ -1,0 +1,10 @@
+#peggys-pantry {
+    --primary: #009DD1;
+    --body-bg: var(--primary);
+}
+
+body {
+    background-image: url('./background.svg');
+    background-position: center center;
+    background-size: 153px;
+}
