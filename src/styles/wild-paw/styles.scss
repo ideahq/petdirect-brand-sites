@@ -1,9 +1,9 @@
-// Custom fonts
-@import "fonts";
-
 // Bootstrap + theme + variables
 @import "custom";
 @import "../global/bootstrap";
+
+// Custom fonts
+@import "fonts";
 
 // Global styles
 @import "../global/layout";

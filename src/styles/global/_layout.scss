@@ -11,11 +11,7 @@
         flex-grow: 1;
         
         > .vstack {
-            gap: $spacer;
-            
-            @include media-breakpoint-up(md) {
-                gap: $spacer * 2;
-            }
+            gap: $spacer * 2;
         }
     }
 }

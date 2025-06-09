@@ -55,7 +55,7 @@ const Slides: SlidesProps = ({slides}) => {
                     >
                         <img src={slide.image} />
                         {!!slide && (
-                            <span className="h3">
+                            <span className="h4">
                                 {slide.name}
                             </span>
                         )}
