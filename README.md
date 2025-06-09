@@ -1,6 +1,6 @@
 # Petdirect Brand Sites
 
-This repository contains a static website built with [Astro](https://astro.build/), enhanced with [React](https://reactjs.org/) components and styled using [React-Bootstrap](https://react-bootstrap.github.io/) and [Sass](https://sass-lang.com/).
+This repository contains static themed websites built with [Astro](https://astro.build/), enhanced with [React](https://reactjs.org/) components and styled using [React-Bootstrap](https://react-bootstrap.github.io/) and [Sass](https://sass-lang.com/).
 
 ## Tech Stack
 
@@ -21,6 +21,12 @@ cd petdirect-brand-sites
 npm install
 ```
 
+## Themes
+
+A theme can be set with an optional [Environment Variable](https://docs.astro.build/en/guides/environment-variables/), either `peggys-pantry` or `wild-paw`. (The default is `peggys-pantry`).
+
+Styles and content are defined per theme.
+
 ## Development
 
 To start the local development server:
@@ -29,10 +35,22 @@ To start the local development server:
 npm run dev
 ```
 
+or
+
+```bash
+THEME=wild-paw npm run dev
+```
+
 ## Build
 
 To generate the static site for production:
 
 ```bash
 npm run build
+```
+
+or
+
+```bash
+THEME=wild-paw npm run build
 ```
