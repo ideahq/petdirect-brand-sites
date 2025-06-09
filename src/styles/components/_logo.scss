@@ -1,0 +1,9 @@
+.logo {
+    --logo-height: #{$spacer * 1.5};
+    height: var(--logo-height);
+    width: auto;
+    
+    @include media-breakpoint-up(lg) {
+        --logo-height: $spacer * 2.5;
+    }
+}
