@@ -54,7 +54,7 @@ const Slides: SlidesProps = ({slides}) => {
                         key={i}
                     >
                         <img src={slide.image} />
-                        {!!slide && (
+                        {!!slide.name && (
                             <span className="h4">
                                 {slide.name}
                             </span>

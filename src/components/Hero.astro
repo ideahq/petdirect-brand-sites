@@ -3,11 +3,18 @@ import { theme } from '../utils/theme';
 import { Col, Image, Row } from 'react-bootstrap';
 ---
 
+{theme.id === 'wild-paw' ? (
+    <style lang="scss">
+        @import "../../src/styles/wild-paw/components/hero.scss";
+    </style>
+) : (
+    <style lang="scss">
+        @import "../../src/styles/peggys-pantry/components/hero.scss";
+    </style>
+)}
+
 <div class="hero">
     {theme.id === 'wild-paw' ? (
-        <style lang="scss">
-            @import "../../src/styles/wild-paw/components/hero.scss";
-        </style>
         <Row className="hero-grid">
             <Col xs={12}>
                 <div class="hero-heading">
@@ -33,7 +40,17 @@ import { Col, Image, Row } from 'react-bootstrap';
             </Col>
         </Row>
     ) : (
-        <p>Dog Treats</p>
-        <p>For training, treating or just because</p>
+        <Row>
+            <Col xs={12} md={7}>
+                <p>Dog Treats</p>
+                <p>For training, treating or just because</p>
+            </Col>
+            <Col xs={12} md={5}>
+                <Image
+                    fluid
+                    src="/peggys-pantry/dog.webp"
+                />
+            </Col>
+        </Row>
     )}
 </div>

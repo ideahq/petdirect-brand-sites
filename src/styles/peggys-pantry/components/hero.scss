@@ -1,0 +1,8 @@
+@import "../custom";
+
+.hero {
+    --border: solid #{$spacer * .75} var(--#{$prefix}primary-border-subtle);
+    background: $secondary;
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
