@@ -1,6 +1,6 @@
 ---
 import { theme } from '../utils/theme';
-import { Col, Image, Row } from 'react-bootstrap';
+import { Col, Image, Row, Stack } from 'react-bootstrap';
 ---
 
 {theme.id === 'wild-paw' ? (
@@ -40,14 +40,23 @@ import { Col, Image, Row } from 'react-bootstrap';
             </Col>
         </Row>
     ) : (
-        <Row>
+        <Row className="g-3 g-lg-5">
             <Col xs={12} md={7}>
-                <p>Dog Treats</p>
-                <p>For training, treating or just because</p>
+                <div class="text-center">
+                    <Stack gap={3}>
+                        <h1 class="display-1 m-0">Dog<br />Treats</h1>
+                        <Stack className="h4 m-0">
+                            <span>For training, treating</span>
+                            <span>or just because</span>
+                        </Stack>
+                    </Stack>
+                </div>
+                <img class="hearts" src="/peggys-pantry/hearts.svg" />
+                <img class="meat" src="/peggys-pantry/meat.svg" />
             </Col>
             <Col xs={12} md={5}>
                 <Image
-                    fluid
+                    className="hero-image"
                     src="/peggys-pantry/dog.webp"
                 />
             </Col>

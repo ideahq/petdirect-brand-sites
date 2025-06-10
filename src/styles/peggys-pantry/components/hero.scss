@@ -3,6 +3,91 @@
 .hero {
     --border: solid #{$spacer * .75} var(--#{$prefix}primary-border-subtle);
     background: $secondary;
+    color: $white;
+    padding: $spacer $spacer 0;
     border-top: var(--border);
     border-bottom: var(--border);
+    position: relative;
+    overflow: hidden;
+    
+    @include media-breakpoint-up(md) {
+        padding-top: 0;
+    }
+    
+    .hearts {
+        position: absolute;
+        top: $spacer * .5;
+        left: $spacer * .5;
+        width: $spacer * 3;
+        height: auto;
+        
+        @include media-breakpoint-up(md) {
+            top: auto;
+            bottom: $spacer * -2;
+            left: $spacer * 2;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            width: $spacer * 5;
+        }
+    }
+    
+    .meat {
+        position: absolute;
+        top: 100%;
+        right: $spacer * .5;
+        width: $spacer * 3.5;
+        height: auto;
+        
+        @include media-breakpoint-up(md) {
+            top: 0;
+            right: $spacer * 2;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            width: $spacer * 6;
+        }
+    }
+    
+    .row {
+        
+        @include media-breakpoint-up(md) {
+            align-items: center;
+        }
+        
+        .col-md-7 {
+            container-type: inline-size;
+            position: relative;
+            
+            .text-center {
+                position: relative;
+                z-index: 1;
+            }
+        }
+        
+        .col-md-5 {
+            
+            @include media-breakpoint-up(md) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    
+    .display-1 {
+        line-height: .8;
+        font-size: clamp(#{$font-size-lg}, 25cqw, #{$font-size-base * 12});
+    }
+    
+    .hero-image {
+        display: block;
+        max-width: $spacer * 20;
+        width: 50vw;
+        margin: 0 auto;
+        
+        @include media-breakpoint-up(md) {
+            width: 100%;
+            margin-top: auto;
+        }
+    }
 }
