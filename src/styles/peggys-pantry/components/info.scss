@@ -6,14 +6,127 @@
     border-bottom: var(--border);
     padding: $spacer $spacer 0;
     
+    @include media-breakpoint-up(md) {
+        padding: 0;
+    }
+    
+    .info-grid {
+        --info-gap: #{$spacer};
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--info-gap);
+        align-items: flex-end;
+        
+        @include media-breakpoint-up(md) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            align-items: stretch;
+            
+            &::before {
+                content: "";
+                grid-column: 2 / span 2;
+                grid-row: 1 / span 1;
+                background: url('/peggys-pantry/bone-line.svg');
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                background-size: 40% auto;
+                pointer-events: none;
+            }
+        }
+        
+        .info-grid-list {
+            flex: 0 0 100%;
+            
+            @include media-breakpoint-up(md) {
+                grid-column: 2 / span 1;
+                grid-row: 1 / span 1;
+                margin: auto 0;
+            }
+        }
+        
+        .info-grid-dog,
+        .info-grid-meat {
+            flex: 0 0 calc(50% - (var(--info-gap)/2));
+            
+            img {
+                display: block;
+                margin: 0 auto;
+                width: auto;
+            }
+        }
+        
+        .info-grid-dog {
+            margin-bottom: auto;
+            
+            @include media-breakpoint-up(md) {
+                grid-column: 1 / span 1;
+                grid-row: 1 / span 1;
+                margin-bottom: 0;
+                margin-top: auto;
+            }
+             
+            img {
+                max-height: $spacer * 12;
+                
+                @include media-breakpoint-up(md) {
+                    max-height: initial;
+                    margin-top: $spacer * 2;
+                }
+            }
+        }
+        
+        .info-grid-meat {
+            
+            @include media-breakpoint-up(md) {
+                grid-column: 3 / span 1;
+                grid-row: 1 / span 1;
+                margin: auto 0;
+            }
+            
+            img {
+                max-height: $spacer * 10;
+                margin-bottom: $spacer;
+                
+                @include media-breakpoint-up(md) {
+                    max-height: initial;
+                    max-width: 70%;
+                }
+            }
+        }
+    }
+    
     .info-list {
         font-family: $font-family-alt;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        @include media-breakpoint-up(md) {
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
 
         .hstack {
+            margin: 0 auto;
             --marker-size: #{$spacer * 3.5};
-            height: var(--marker-size);
+            min-height: var(--marker-size);
             font-size: $h4-font-size;
             align-items: center;
+            line-height: 1;
+            
+            @include media-breakpoint-up(md) {
+                margin: 0;
+            }
+            
+            @include media-breakpoint-up(lg) {
+                font-size: $h3-font-size;
+            }
+            
+            @include media-breakpoint-up(xl) {
+                font-size: $h2-font-size;
+            }
             
             .icon {
                 height: var(--marker-size);

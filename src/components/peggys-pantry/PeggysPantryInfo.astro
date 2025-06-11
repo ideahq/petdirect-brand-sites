@@ -7,9 +7,9 @@ import { Col, Image, Row, Stack } from 'react-bootstrap';
 </style>
 
 <div class="info">
-    <Row>
-        <Col xs={12}>
-            <Stack className="info-list">
+    <div class="info-grid">
+        <div class="info-grid-list">
+            <div class="info-list">
                 <Stack direction="horizontal" gap={2}>
                     <Image className="icon" src="/peggys-pantry/info/paw.svg" />
                     <span>For dogs of all sizes</span>
@@ -26,15 +26,15 @@ import { Col, Image, Row, Stack } from 'react-bootstrap';
                     <Image className="icon" src="/peggys-pantry/info/leaves.svg" />
                     <span>No artificial preservatives</span>
                 </Stack>
-            </Stack>
-        </Col>
-        <Col xs={6}>
+            </div>
+        </div>
+        <div class="info-grid-dog">
             <Image fluid src={`/peggys-pantry/info/dog.webp`} />
-        </Col>
-        <Col xs={6}>
+        </div>
+        <div class="info-grid-meat">
             <Image fluid src={`/peggys-pantry/info/beef.webp`} />
-        </Col>
-    </Row>
+        </div>
+    </div>
 </div>
 
 <div class="benefits">
