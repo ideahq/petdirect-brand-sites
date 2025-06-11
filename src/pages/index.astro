@@ -5,6 +5,7 @@ import Hero from '../components/Hero.astro';
 import Products from '../components/Products.astro';
 import WildPawInfo from '../components/wild-paw/WildPawInfo.astro';
 import PeggysPantryInfo from '../components/peggys-pantry/PeggysPantryInfo.astro';
+import PeggysPantryBenefits from '../components/peggys-pantry/PeggysPantryBenefits.astro';
 import Gallery from '../components/Gallery.astro';
 import { theme } from '../utils/theme';
 ---
@@ -18,6 +19,7 @@ import { theme } from '../utils/theme';
         )}
         {theme.id === 'peggys-pantry' && (
             <PeggysPantryInfo />
+            <PeggysPantryBenefits />
         )}
         <Gallery />
     </Stack>

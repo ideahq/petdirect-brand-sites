@@ -135,20 +135,3 @@
         }
     }
 }
-
-.benefits {
-    padding: $spacer;
-    border-bottom: var(--border);
-
-    .benefits-list {
-        background: $quinary;
-        color: $white;
-        padding: $spacer * 2;
-
-        .benefit-heading {
-            font-family: $font-family-alt;
-            font-size: $h3-font-size;
-            text-transform: uppercase;
-        }
-    }
-}

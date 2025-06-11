@@ -1,12 +1,24 @@
 ---
-import { Navbar } from 'react-bootstrap';
+import Navigation from './Navigation';
 import { theme } from '../utils/theme';
+
+const links = [
+    {
+        name: "About",
+        url: "#"
+    },
+    {
+        name: "Shop",
+        url: "#"
+    }
+]
 ---
 
 <header>
-    <Navbar className="p-3">
-        <Navbar.Brand href="/">
-            <img class="logo" src={`${theme.id}/logo.svg`} alt={theme.name} />
-        </Navbar.Brand>
-    </Navbar>
+    <Navigation
+        client:visible
+        name={theme.name}
+        id={theme.id}
+        links={links}
+    />
 </header>
