@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Image, Nav, Navbar } from 'react-bootstrap';
 
 interface NavigationProps {
     logo: string;
@@ -14,7 +14,7 @@ const Navigation: NavigationProps = ({...props}) => {
     return (
         <Navbar className="p-3" expand="md">
             <Navbar.Brand href="/">
-                <img class="logo" src={`${props.id}/logo.svg`} alt={props.name} />
+                <Image className="logo" src={`${props.id}/logo.svg`} alt={props.name} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-nav" />
             <Navbar.Collapse id="navbar-nav">
