@@ -1,0 +1,41 @@
+@import "../custom";
+
+.info {
+    background: $tertiary;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    padding: $spacer $spacer 0;
+    
+    .info-list {
+        font-family: $font-family-alt;
+
+        .hstack {
+            --marker-size: #{$spacer * 3.5};
+            height: var(--marker-size);
+            font-size: $h4-font-size;
+            align-items: center;
+            
+            .icon {
+                height: var(--marker-size);
+                width: var(--marker-size);
+            }
+        }
+    }
+}
+
+.benefits {
+    padding: $spacer;
+    border-bottom: var(--border);
+
+    .benefits-list {
+        background: $quinary;
+        color: $white;
+        padding: $spacer * 2;
+
+        .benefit-heading {
+            font-family: $font-family-alt;
+            font-size: $h3-font-size;
+            text-transform: uppercase;
+        }
+    }
+}

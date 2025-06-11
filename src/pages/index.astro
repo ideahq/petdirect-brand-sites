@@ -3,15 +3,22 @@ import Layout from '../layouts/Layout.astro';
 import { Stack } from 'react-bootstrap';
 import Hero from '../components/Hero.astro';
 import Products from '../components/Products.astro';
-import Info from '../components/Info.astro';
+import WildPawInfo from '../components/wild-paw/WildPawInfo.astro';
+import PeggysPantryInfo from '../components/peggys-pantry/PeggysPantryInfo.astro';
 import Gallery from '../components/Gallery.astro';
+import { theme } from '../utils/theme';
 ---
 
 <Layout>
     <Stack>
         <Hero />
         <Products />
-        <Info />
+        {theme.id === 'wild-paw' && (
+            <WildPawInfo />
+        )}
+        {theme.id === 'peggys-pantry' && (
+            <PeggysPantryInfo />
+        )}
         <Gallery />
     </Stack>
 </Layout>

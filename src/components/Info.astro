@@ -1,5 +1,5 @@
 ---
-import { Col, Row, Stack } from 'react-bootstrap';
+import { Col, Image, Row, Stack } from 'react-bootstrap';
 import { theme } from '../utils/theme';
 const points = [
     {
@@ -21,8 +21,8 @@ const points = [
 ];
 ---
 
-<div class="info">
-    {theme.id === 'wild-paw' ? (
+{theme.id === 'wild-paw' ? (
+    <div class="info">
         <style lang="scss">
             @import "../../src/styles/wild-paw/components/info.scss";
         </style>
@@ -36,7 +36,27 @@ const points = [
                 </Col>
             )}
         </Row>
-    ) : (
-        <span>{theme.name}</span>
-    )}
-</div>
+    </div>
+) : (
+    <div class="info">
+        <style lang="scss">
+            @import "../../src/styles/peggys-pantry/components/info.scss";
+        </style>
+        <Row>
+            <Col xs={12}>
+                <ul>
+                    <li>For dogs of all sizes</li>
+                    <li>Protein packed reward</li>
+                    <li>Simple, natural, delicious</li>
+                    <li>No artificial preservatives</li>
+                </ul>
+            </Col>
+            <Col xs={6}>
+                <Image fluid src={`/${theme.id}/info/dog.webp`} />
+            </Col>
+            <Col xs={6}>
+                <Image fluid src={`/${theme.id}/info/beef.webp`} />
+            </Col>
+        </Row>
+    </div>
+)}

@@ -9,8 +9,16 @@
 @import "../global/layout";
 @import "../global/components";
 
+// Site styles
 body {
     background-image: url('/peggys-pantry/background.svg');
     background-position: center center;
     background-size: 153px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    letter-spacing: 6%;
+    font-weight: 600;
+    font-style: normal;
 }

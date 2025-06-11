@@ -2,23 +2,20 @@ $prefix: '';
 $link-decoration: none;
 
 $font-family-sans-serif: 'gotham', sans-serif;
-$font-weight-lighter:  300;
-$font-weight-light:    300;
-$font-weight-normal:   300;
-$font-weight-medium:   700;
-$font-weight-semibold: 700;
-$font-weight-bold:     700;
-$font-weight-bolder:   700;
+$font-family-alt:        'atf-alternate-gothic-condensed', sans-serif;
+$font-weight-lighter:    300;
+$font-weight-light:      300;
+$font-weight-normal:     300;
+$font-weight-medium:     700;
+$font-weight-semibold:   700;
+$font-weight-bold:       700;
+$font-weight-bolder:     700;
 
 $headings-font-family: $font-family-sans-serif;
 $headings-font-weight: $font-weight-normal;
 $display-font-family: 'verveine', sans-serif;
 
-h1,h2,h3,h4,h5,h6 {
-    text-transform: uppercase;
-    letter-spacing: 6%;
-}
-
+$black:  #000000;
 $blue:   #009DD1;
 $red:    #C1353C;
 $yellow: #EBE362;
@@ -27,12 +24,19 @@ $green:  #33502B;
 $orange: #CB743A;
 $pink:   #BF428F;
 
-$primary:   $blue;
-$secondary: $red;
-$body-bg:   $primary;
+$primary:    $blue;
+$secondary:  $red;
+$tertiary:   $yellow;
+$quinary:    $purple;
+$body-bg:    $primary;
+$body-color: $black;
 
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
+
+:root {
+    --#{$prefix}border: solid #{$spacer * .75} var(--#{$prefix}primary-border-subtle);
+}

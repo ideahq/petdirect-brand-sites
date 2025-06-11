@@ -8,3 +8,9 @@
 // Global styles
 @import "../global/layout";
 @import "../global/components";
+
+// Site styles
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    letter-spacing: 6%;
+}

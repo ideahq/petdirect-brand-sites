@@ -3,21 +3,84 @@ import { Col, Row, Ratio } from 'react-bootstrap';
 import { theme } from '../utils/theme';
 
 let title = "Beg-Worthy Bites";
+let cols = 3;
+let images = [
+    {
+        path: '/peggys-pantry/gallery/air-dried-duck-fillets.webp',
+        url: '#'
+    },
+    {
+        path: '/peggys-pantry/gallery/grilled-chicken-jerky.webp',
+        url: '#'
+    },
+    {
+        path: '/peggys-pantry/gallery/chicken-and-codfish-rolls.webp',
+        url: '#'
+    },
+    {
+        path: '/peggys-pantry/gallery/oven-baked-chicken-sausages.webp',
+        url: '#'
+    },
+    {
+        path: '/peggys-pantry/gallery/chicken-bone-wraps-with-a-crunch.webp',
+        url: '#'
+    },
+    {
+        path: '/peggys-pantry/gallery/slow-roasted-lamb-strips.webp',
+        url: '#'
+    }
+];
 
 if (theme.id === 'wild-paw') {
     title = "Paws Gallery";
+    cols = 4;
+    images = [
+        {
+            path: '/wild-paw/gallery/test.webp',
+            url: '#'
+        },
+        {
+            path: '/wild-paw/gallery/test.webp',
+            url: '#'
+        },
+        {
+            path: '/wild-paw/gallery/test.webp',
+            url: '#'
+        },
+        {
+            path: '/wild-paw/gallery/test.webp',
+            url: '#'
+        },
+        {
+            path: '/wild-paw/gallery/test.webp',
+            url: '#'
+        },
+        {
+            path: '/wild-paw/gallery/test.webp',
+            url: '#'
+        },
+        {
+            path: '/wild-paw/gallery/test.webp',
+            url: '#'
+        },
+        {
+            path: '/wild-paw/gallery/test.webp',
+            url: '#'
+        }
+    ]
 }
-
 ---
 
 <div class="gallery">
     <h3 class="section-heading">{title}</h3>
     <Row>
-        {Array.from({ length: 8 }).map((u, i) =>
-            <Col xs={6} md={3} key={i}>
-                <Ratio>
-                    <img src="/test.webp" />
-                </Ratio>
+        {images.map((image, i) =>
+            <Col xs={6} md={cols === 3 ? 4 : 3} key={i}>
+                <a class="d-block" href={image.url}>
+                    <Ratio>
+                        <img src={image.path} />
+                    </Ratio>
+                </a>
             </Col>
         )}
     </Row>

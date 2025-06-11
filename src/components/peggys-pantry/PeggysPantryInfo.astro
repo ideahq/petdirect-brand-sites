@@ -1,0 +1,71 @@
+---
+import { Col, Image, Row, Stack } from 'react-bootstrap';
+---
+
+<style lang="scss">
+    @import "../../../src/styles/peggys-pantry/components/info.scss";
+</style>
+
+<div class="info">
+    <Row>
+        <Col xs={12}>
+            <Stack className="info-list">
+                <Stack direction="horizontal" gap={2}>
+                    <Image className="icon" src="/peggys-pantry/info/paw.svg" />
+                    <span>For dogs of all sizes</span>
+                </Stack>
+                <Stack direction="horizontal" gap={2}>
+                    <Image className="icon" src="/peggys-pantry/info/meat.svg" />
+                    <span>Protein packed reward</span>
+                </Stack>
+                <Stack direction="horizontal" gap={2}>
+                    <Image className="icon" src="/peggys-pantry/info/hearts.svg" />
+                    <span>Simple, natural, delicious</span>
+                </Stack>
+                <Stack direction="horizontal" gap={2}>
+                    <Image className="icon" src="/peggys-pantry/info/leaves.svg" />
+                    <span>No artificial preservatives</span>
+                </Stack>
+            </Stack>
+        </Col>
+        <Col xs={6}>
+            <Image fluid src={`/peggys-pantry/info/dog.webp`} />
+        </Col>
+        <Col xs={6}>
+            <Image fluid src={`/peggys-pantry/info/beef.webp`} />
+        </Col>
+    </Row>
+</div>
+
+<div class="benefits">
+    <div class="benefits-list">
+        <Stack direction="horizontal" gap={2}>
+            <Image className="icon" src="/peggys-pantry/check.svg" />
+            <Stack>
+                <span class="benefit-heading">Real meat, real Good</span>
+                <span>Made with real chicken to help support lean muscle and energy.</span>
+            </Stack>
+        </Stack>
+        <Stack direction="horizontal" gap={2}>
+            <Image className="icon" src="/peggys-pantry/check.svg" />
+            <Stack>
+                <span class="benefit-heading">Training Made Healthy</span>
+                <span>A low-fat reward made for daily training, treating, or just because.</span>
+            </Stack>
+        </Stack>
+        <Stack direction="horizontal" gap={2}>
+            <Image className="icon" src="/peggys-pantry/check.svg" />
+            <Stack>
+                <span class="benefit-heading">Made with natural ingredients</span>
+                <span>Made with quality ingredients - no grains or fillers.</span>
+            </Stack>
+        </Stack>
+        <Stack direction="horizontal" gap={2}>
+            <Image className="icon" src="/peggys-pantry/check.svg" />
+            <Stack>
+                <span class="benefit-heading">High protein, low fat</span>
+                <span>A protein-rich snack that supports strong, active dogs without the extra calories.</span>
+            </Stack>
+        </Stack>
+    </div>
+</div>
