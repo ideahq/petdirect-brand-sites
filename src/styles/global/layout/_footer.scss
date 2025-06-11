@@ -1,0 +1,24 @@
+footer {
+    
+    @include media-breakpoint-up(md) {
+        padding-top: $spacer;
+        padding-bottom: $spacer;
+    }
+    
+    .social-link {
+        display: block;
+        height: $spacer * 4;
+        width: $spacer * 4;
+    }
+    
+    .pipe::before {
+        content: "";
+        border-left: solid map-get($border-widths, 2) $body-color;
+    }
+    
+    .h6 {
+        line-height: 1;
+        font-size: $font-size-sm;
+        margin: 0;
+    }
+}

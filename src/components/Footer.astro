@@ -1,8 +1,44 @@
 ---
-const currentYear = new Date().getFullYear();
+import { Image, Ratio, Stack } from 'react-bootstrap';
 import { theme } from '../utils/theme';
+
+const currentYear = new Date().getFullYear();
+const socials = [
+    {
+        name: 'facebook',
+        url: '#'
+    },
+    {
+        name: 'instagram',
+        url: '#'
+    },
+    {
+        name: 'tiktok',
+        url: '#'
+    }
+]
 ---
 
 <footer class="p-3 text-center">
-    &copy; {currentYear} {theme.name}
+    <Stack gap={3}>
+        <Stack direction="horizontal" className="justify-content-center">
+            {socials.map((social) =>
+                <a href={social.url} class="social-link">
+                    <Ratio>
+                        <Image src={`/${social.name}.svg`} />
+                    </Ratio>
+                </a>
+            )}
+        </Stack>
+        <Stack gap={3} direction="horizontal" className="justify-content-center align-items-center">
+            <a class="h6" href="#">Shipping</a>
+            <span class="pipe" />
+            <a class="h6" href="#">Returns</a>
+            <span class="pipe" />
+            <a class="h6" href="#">Contact</a>
+        </Stack>
+        <div>
+            <small>&copy; {currentYear} {theme.name}</small>
+        </div>
+    </Stack>
 </footer>

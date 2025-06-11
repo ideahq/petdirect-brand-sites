@@ -1,6 +1,7 @@
 .layout {
     --#{$prefix}gutter-x: 0;
     --#{$prefix}gutter-y: 0;
+    --layout-spacer: #{$spacer * 2};
     background: $white;
     min-height: 100vh;
     display: flex;
@@ -11,7 +12,11 @@
         flex-grow: 1;
         
         > .vstack {
-            gap: $spacer * 2;
+            gap: var(--layout-spacer);
         }
+    }
+    
+    > footer {
+        margin-top: var(--layout-spacer);
     }
 }

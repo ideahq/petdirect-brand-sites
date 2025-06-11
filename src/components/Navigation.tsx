@@ -18,7 +18,7 @@ const Navigation: NavigationProps = ({...props}) => {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-nav" />
             <Navbar.Collapse id="navbar-nav">
-                <Nav className="ms-auto pt-3 pt-md-0">
+                <Nav className="ms-auto gap-md-4 pe-md-3 pt-3 pt-md-0 navbar-nav">
                     {props.links.map((link, i) =>
                         <Nav.Link
                             key={i}
