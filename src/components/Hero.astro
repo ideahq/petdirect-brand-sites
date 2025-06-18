@@ -3,18 +3,37 @@ import { theme } from '../utils/theme';
 import { Col, Image, Row, Stack } from 'react-bootstrap';
 ---
 
-{theme.id === 'wild-paw' ? (
-    <style lang="scss">
-        @import "../../src/styles/wild-paw/components/hero.scss";
-    </style>
-) : (
-    <style lang="scss">
-        @import "../../src/styles/peggys-pantry/components/hero.scss";
-    </style>
-)}
-
 <div class="hero">
-    {theme.id === 'wild-paw' ? (
+    {theme.id === 'peggys-pantry' && (
+        <style lang="scss">
+            @import "../../src/styles/peggys-pantry/components/hero.scss";
+        </style>
+        <Row className="g-3 g-lg-5">
+            <Col xs={12} md={7}>
+                <div class="text-center">
+                    <Stack gap={3}>
+                        <h1 class="display-1 m-0">Dog<br />Treats</h1>
+                        <Stack className="h4 m-0">
+                            <span>For training, treating</span>
+                            <span>or just because</span>
+                        </Stack>
+                    </Stack>
+                </div>
+                <img class="hearts" src="/peggys-pantry/hearts.svg" />
+                <img class="meat" src="/peggys-pantry/meat.svg" />
+            </Col>
+            <Col xs={12} md={5}>
+                <Image
+                    className="hero-image"
+                    src="/peggys-pantry/dog.webp"
+                />
+            </Col>
+        </Row>
+    )}
+    {theme.id === 'wild-paw' && (
+        <style lang="scss">
+            @import "../../src/styles/wild-paw/components/hero.scss";
+        </style>
         <Row className="hero-grid">
             <Col xs={12}>
                 <div class="hero-heading">
@@ -39,26 +58,17 @@ import { Col, Image, Row, Stack } from 'react-bootstrap';
                 </div>
             </Col>
         </Row>
-    ) : (
-        <Row className="g-3 g-lg-5">
-            <Col xs={12} md={7}>
-                <div class="text-center">
-                    <Stack gap={3}>
-                        <h1 class="display-1 m-0">Dog<br />Treats</h1>
-                        <Stack className="h4 m-0">
-                            <span>For training, treating</span>
-                            <span>or just because</span>
-                        </Stack>
-                    </Stack>
+    )}
+    {theme.id === 'calibre' && (
+        <style lang="scss">
+            @import "../../src/styles/wild-paw/components/hero.scss";
+        </style>
+        <Row className="hero-grid">
+            <Col xs={12}>
+                <div class="hero-heading">
+                    <h1>Cat Litter</h1>
+                    <h4>One Brand. Four Purrfect Fits.</h4>
                 </div>
-                <img class="hearts" src="/peggys-pantry/hearts.svg" />
-                <img class="meat" src="/peggys-pantry/meat.svg" />
-            </Col>
-            <Col xs={12} md={5}>
-                <Image
-                    className="hero-image"
-                    src="/peggys-pantry/dog.webp"
-                />
             </Col>
         </Row>
     )}

@@ -11,7 +11,7 @@ export default defineConfig({
             THEME: envField.enum({
                 context: "server",
                 access: "secret",
-                values: ["peggys-pantry", "wild-paw"],
+                values: ["peggys-pantry", "wild-paw", "calibre"],
                 default: "peggys-pantry"
             })
         }
