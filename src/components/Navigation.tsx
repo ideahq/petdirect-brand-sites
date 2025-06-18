@@ -23,6 +23,7 @@ const Navigation: NavigationProps = ({...props}) => {
                         <Nav.Link
                             key={i}
                             href={link.url}
+                            target="_blank"
                         >
                             {link.name}
                         </Nav.Link>

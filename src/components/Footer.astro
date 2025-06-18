@@ -21,22 +21,24 @@ const socials = [
 
 <footer class="p-3 text-center">
     <Stack gap={3}>
-        <Stack direction="horizontal" className="justify-content-center">
-            {socials.map((social) =>
-                <a href={social.url} class="social-link">
-                    <Ratio>
-                        <Image src={`/${social.name}.svg`} />
-                    </Ratio>
-                </a>
-            )}
-        </Stack>
-        <Stack gap={3} direction="horizontal" className="justify-content-center align-items-center">
-            <a class="h6" href="#">Shipping</a>
-            <span class="pipe" />
-            <a class="h6" href="#">Returns</a>
-            <span class="pipe" />
-            <a class="h6" href="#">Contact</a>
-        </Stack>
+        {/*
+            <Stack direction="horizontal" className="justify-content-center">
+                {socials.map((social) =>
+                    <a href={social.url} class="social-link">
+                        <Ratio>
+                            <Image src={`/${social.name}.svg`} />
+                        </Ratio>
+                    </a>
+                )}
+            </Stack>
+            <Stack gap={3} direction="horizontal" className="justify-content-center align-items-center">
+                <a class="h6" href="#">Shipping</a>
+                <span class="pipe" />
+                <a class="h6" href="#">Returns</a>
+                <span class="pipe" />
+                <a class="h6" href="#">Contact</a>
+            </Stack>
+        */}
         <div>
             <small>&copy; {currentYear} {theme.name}</small>
         </div>
