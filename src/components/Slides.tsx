@@ -52,6 +52,7 @@ const Slides: SlidesProps = ({slides}) => {
                         gap={3}
                         className="slide"
                         key={i}
+                        target="_blank"
                     >
                         <img src={slide.image} />
                         {!!slide.name && (
