@@ -23,7 +23,7 @@ npm install
 
 ## Themes
 
-A theme can be set with an optional [Environment Variable](https://docs.astro.build/en/guides/environment-variables/), either `peggys-pantry` or `wild-paw`. (The default is `peggys-pantry`).
+A theme can be set with an optional [Environment Variable](https://docs.astro.build/en/guides/environment-variables/), either `peggys-pantry` or `wild-paw`. (The default is `wild-paw`).
 
 Styles and content are defined per theme.
 
@@ -38,7 +38,7 @@ npm run dev
 or
 
 ```bash
-THEME=wild-paw npm run dev
+THEME=peggys-pantry npm run dev
 ```
 
 ## Build
@@ -52,5 +52,5 @@ npm run build
 or
 
 ```bash
-THEME=wild-paw npm run build
+THEME=peggys-pantry npm run build
 ```

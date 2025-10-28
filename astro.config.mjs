@@ -5,6 +5,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
+    site: 'https://ideahq.github.io',
+    base: '/petdirect-brand-sites',
     integrations: [react()],
     env: {
         schema: {
@@ -12,7 +14,7 @@ export default defineConfig({
                 context: "server",
                 access: "secret",
                 values: ["peggys-pantry", "wild-paw", "calibre"],
-                default: "peggys-pantry"
+                default: "wild-paw"
             })
         }
     }
