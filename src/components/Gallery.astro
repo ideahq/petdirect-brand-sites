@@ -1,5 +1,5 @@
 ---
-import { Col, Row, Ratio } from 'react-bootstrap';
+import GalleryGrid from './GalleryGrid';
 import { theme } from '../utils/theme';
 
 let title = "Beg-Worthy Bites";
@@ -112,15 +112,5 @@ if (theme.id === 'calibre') {
 
 <div class="gallery">
     <h3 class="section-heading">{title}</h3>
-    <Row>
-        {images.map((image, i) =>
-            <Col xs={6} md={cols === 3 ? 4 : 3} key={i}>
-                <a class="d-block" href={image.url}>
-                    <Ratio>
-                        <img src={import.meta.env.BASE_URL + image.path} />
-                    </Ratio>
-                </a>
-            </Col>
-        )}
-    </Row>
+    <GalleryGrid client:load images={images} cols={cols} baseUrl={import.meta.env.BASE_URL} />
 </div>
