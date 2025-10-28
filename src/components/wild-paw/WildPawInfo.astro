@@ -29,7 +29,7 @@ const points = [
         {points.map((point, i) =>
             <Col xs={12} md={3} key={i}>
                 <Stack gap={3} className="align-items-center">
-                    <img src={`/wild-paw/info/${point.image}.svg`} />
+                    <img src={`${import.meta.env.BASE_URL}/wild-paw/info/${point.image}.svg`} />
                     <span class="lead">{point.text}</span>
                 </Stack>
             </Col>

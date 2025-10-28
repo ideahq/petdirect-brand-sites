@@ -14,7 +14,7 @@ const Navigation: NavigationProps = ({...props}) => {
     return (
         <Navbar className="p-3" expand="md">
             <Navbar.Brand href="/">
-                <Image className="logo" src={`${props.id}/logo.svg`} alt={props.name} />
+                <Image className="logo" src={props.logo} alt={props.name} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-nav" />
             <Navbar.Collapse id="navbar-nav">

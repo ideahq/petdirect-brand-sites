@@ -117,7 +117,7 @@ if (theme.id === 'calibre') {
             <Col xs={6} md={cols === 3 ? 4 : 3} key={i}>
                 <a class="d-block" href={image.url}>
                     <Ratio>
-                        <img src={image.path} />
+                        <img src={import.meta.env.BASE_URL + image.path} />
                     </Ratio>
                 </a>
             </Col>
