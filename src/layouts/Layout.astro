@@ -12,23 +12,8 @@ import { theme } from '../utils/theme';
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{theme.name}</title>
-        {theme.id === 'peggys-pantry' && (
-            <style is:global lang="scss">
-                @import "../../src/styles/peggys-pantry/styles.scss";
-            </style>
-        )}
-        {theme.id === 'wild-paw' && (
-            <style is:global lang="scss">
-                @import "../../src/styles/wild-paw/styles.scss";
-            </style>
-        )}
-        {theme.id === 'calibre' && (
-            <style is:global lang="scss">
-                @import "../../src/styles/calibre/styles.scss";
-            </style>
-        )}
     </head>
-    <body>
+    <body class={theme.id}>
         <Container className="layout">
             <Header />
             <section>
