@@ -9,10 +9,9 @@ interface GalleryImage {
 interface GalleryGridProps {
     images: GalleryImage[];
     cols: number;
-    baseUrl: string;
 }
 
-export default function GalleryGrid({ images, cols, baseUrl }: GalleryGridProps) {
+export default function GalleryGrid({ images, cols }: GalleryGridProps) {
     const [showModal, setShowModal] = useState(false);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -44,7 +43,7 @@ export default function GalleryGrid({ images, cols, baseUrl }: GalleryGridProps)
                             style={{ cursor: 'pointer' }}
                         >
                             <Ratio>
-                                <img src={baseUrl + image.path} alt={`Gallery image ${i + 1}`} />
+                                <img src={image.path} alt={`Gallery image ${i + 1}`} />
                             </Ratio>
                         </a>
                     </Col>
@@ -57,7 +56,7 @@ export default function GalleryGrid({ images, cols, baseUrl }: GalleryGridProps)
                 <Modal.Body>
                     {selectedImage && (
                         <img
-                            src={baseUrl + selectedImage}
+                            src={selectedImage}
                             alt="Gallery image"
                             style={{ width: '100%', height: 'auto' }}
                         />

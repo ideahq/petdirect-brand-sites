@@ -5,8 +5,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://ideahq.github.io',
-    base: '/petdirect-brand-sites',
+    site: 'https://wildpaw.co.nz/',
     integrations: [react()],
     env: {
         schema: {
