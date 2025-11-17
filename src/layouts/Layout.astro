@@ -1,8 +1,10 @@
 ---
+declare const __THEME__: string;
 import { Container } from 'react-bootstrap';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { theme } from '../utils/theme';
+await import('../styles/'+__THEME__+'/styles.scss');
 ---
 
 <html lang="en">
